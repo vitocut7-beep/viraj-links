@@ -28,20 +28,21 @@ window.addEventListener("load", () => {
 // ===== 3D CARD MOVEMENT =====
 
 
-document.addEventListener("mousemove",(e)=>{
+// ===== MOBILE TOUCH EFFECT =====
 
 
-    const x = (window.innerWidth / 2 - e.clientX) / 30;
+card.addEventListener("touchstart",()=>{
 
-    const y = (window.innerHeight / 2 - e.clientY) / 30;
-
-
-    card.style.transform = 
-    `rotateY(${x}deg) rotateX(${y}deg)`;
-
+    card.style.transform="scale(0.97)";
 
 });
 
+
+card.addEventListener("touchend",()=>{
+
+    card.style.transform="scale(1)";
+
+});
 
 
 // Reset when mouse leaves
